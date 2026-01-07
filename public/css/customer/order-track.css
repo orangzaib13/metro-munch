@@ -1,0 +1,140 @@
+ :root {
+            --primary-color: #c41e3a;
+            --primary-light: #dc35451c;
+            --success-color: #10b981;
+            --text-muted: #6b7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
+        }
+
+        /* Navbar customization */
+        .navbar {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .navbar-brand {
+            color: var(--primary-color) !important;
+        }
+
+        /* Tracking Header Section */
+        .tracking-hero {
+            background: #e7747d;
+            padding: 2rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        /* Card Styling */
+        .card {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+        .card-header {
+            background: white;
+            border-bottom: 1px solid #f3f4f6;
+            font-weight: 600;
+            padding: 1.25rem;
+        }
+
+        /* Timeline Styling */
+        .timeline {
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+            padding-left: 2.5rem;
+            border-left: 2px solid #e5e7eb;
+        }
+
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -11px; /* Adjust based on border width and icon size */
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #e5e7eb;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-marker i {
+            font-size: 10px;
+            color: white;
+            display: none;
+        }
+
+        /* Timeline States */
+        .timeline-item.completed .timeline-marker {
+            background: var(--success-color);
+            box-shadow: 0 0 0 2px var(--success-color);
+        }
+        .timeline-item.completed .timeline-marker i {
+            display: block;
+        }
+        .timeline-item.active .timeline-marker {
+            background: white;
+            box-shadow: 0 0 0 3px var(--primary-color);
+        }
+        
+        .timeline-content h6 {
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Product List */
+        .product-img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #f3f4f6;
+        }
+
+        /* Progress Bar Animation */
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #e5e7eb;
+        }
+        .progress-bar {
+            background-color: var(--primary-color);
+            transition: width 1s ease-in-out;
+        }
+
+        /* Utility */
+        .status-badge {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+
+        /* Toast Container */
+        .toast-container {
+            z-index: 1060;
+        }
