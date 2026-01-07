@@ -14,4 +14,4 @@ Customer management per branch
 
 Order tracking and status updates
 
-Fully
+Fully responsive UI
